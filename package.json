@@ -1,0 +1,32 @@
+{
+  "name": "nian",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-folding-chapters": "^0.0.9",
+    "gitbook-plugin-page-toc": "^1.1.1",
+    "gitbook-plugin-prism": "^2.4.0",
+    "gitbook-plugin-splitter": "^0.0.8",
+    "gitbook-plugin-theme-code": "^0.0.24",
+    "gitbook-plugin-url-embed": "^1.0.0"
+  },
+  "devDependencies": {
+    "@tencent/deploy-tool": "^1.0.12",
+    "open-cli": "^1.0.5"
+  },
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "pub": "npm run build && git add . && git commit -am auto-pub && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
