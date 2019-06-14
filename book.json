@@ -1,16 +1,17 @@
 {
-    "title": "Nian",
-    "author": "bryson",
+    "title": "My Notes",
+    "author": "xianian",
     "authorHomepage": "",
-    "description": "笔记",
+    "description": "个人笔记",
     "language": "zh-hans",
     "copyright": "All Rights Reserved",
     "root": ".",
     "structure": {
         "summary": "SUMMARY.md",
-        "readme": "README.md"
+        "readme": "Introduction.md"
     },
     "variables": {
+        "uxDisplayServe": "http://xxx.com",
         "homePage": "/"
     },
     "plugins": [
@@ -20,25 +21,28 @@
         "prism",
         "folding-chapters",
         "-sharing",
-        "url-embed"
+        "url-embed",
+        "custom-js-css"
     ],
     "pluginsConfig": {
+        "fontsettings": {
+            "theme": "sepia",
+            "family": "sans",
+            "size": 1
+        },
         "theme-default": {
             "showLevel": true
-        },
-        "sharing": {
-            "facebook": false,
-            "twitter": false,
-            "google": false,
-            "weibo": false,
-            "instapaper": false,
-            "vk": false,
-            "all": []
         },
         "page-toc": {
             "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
             "position": "before-first",
             "showByDefault": true
+        },
+        "custom-js-css": {
+            "js": [],
+            "css": [
+                "./css/custom-gitbook.css"
+            ]
         }
     }
 }
