@@ -16,6 +16,28 @@
 
 ##分布式系统
 
+需求：高并发、高吞吐、低延迟、负载均衡。
+理解高并发和高吞吐的区别和联系。
+
+分层模型
+并发模型
+缓冲技术
+存储技术
+硬件故障率
+资源利用率优化
+软件服务内容更新
+数据统计和决策
+目录服务（ZooKeeper）
+消息队列服务（ActiveMQ、ZeroMQ、Jgroups）
+事务系统
+自动部署工具（Docker）
+日志服务（log4j）
+微服务框架：EJB、WebService
+异步编程工具：协程、Futrue、Lamda
+云服务模型：IaaS/PaaS/SaaS
+
+文章地址：https://juejin.im/entry/581db4358ac247004ff4ed17
+
 ##微服务架构
 
 ##主流分布式服务框架
@@ -32,6 +54,8 @@
 
 ##缓存
 
+oracle产品coherence缓存
+
 ###作用
 
 ###产品介绍（Ehcache、OsCache、MemCache、Redis）
@@ -43,4 +67,6 @@
 ###产品介绍
 
 ##日志
+
+
 
