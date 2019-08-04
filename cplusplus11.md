@@ -62,3 +62,25 @@ std::map 与 std::unordered_map比较
 2.内存消耗上，unordered_map通常比map多
 3.查询时间上，每次查询map复杂度O(log n),unordered_map不考虑hash冲突复杂度是O(1)
 4.自定义key对象时，map需要重载operator <用于key的比较，unordered_map需要提供std::hash<K>并且重载==operator
+
+* multithreading
+std::thread()接受三种方式创建线程，
+    1.函数指针（函数地址）
+    2.函数对象（通常是类重载了operator()）
+    3.lambda函数
+std::thread::detach() vs std::thread::join(),一个等待线程结束，一个分离线程，主线程结束了也不影响子线程运行。这两个都需要注意不要重复调用，否则会出现coredump
+std::async()(接收一个回调的函数模版),异步执行回调函数,返回一个std::future<T>的对象。
+std::mutex()
+std::lock_guard()(实现了RAII机制的类模版)
+Condition Variables:Condition Variable is a kind of Event used for signaling between two or more threads.
+(减少频繁申请和释放互斥锁的步骤)
+std::future(类模版)： std::future is a class template and its object stores the future value.
+std::promise(类模版): std::promise is also a class template and its object promises to set the value in future. Each std::promise object has an associated std::future object that will give the value once set by the std::promise object.
+使用方法:
+ 1.std::promise首先创建一个promise对象，表示该对象将被未来赋值。
+ 2.通过该对象的get_future()方法，获取相应的std::future对象，std::future标识该对象未来存了值。
+ 3.std::future调用get()方法，阻塞知道这个对象确实被赋值。
+
+std::packaged_task<>(类模版,代表一个异步任务)
+std::packaged_task<> is movable but not copy-able, so we need to move it to thread.(不能赋值，但是可以移植给另一个线程)
+
